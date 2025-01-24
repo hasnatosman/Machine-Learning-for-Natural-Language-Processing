@@ -23,9 +23,14 @@ link_list = []
 for i in range(1,41):
     type_i = str(i)
 
+    # using X.PATH
+
     # link = driver.find_element(By.XPATH, '//*[@id="root"]/div/div[2]/div[1]/div/div[1]/div[2]/div['+type_i+']/div/div/div[2]/div[2]/a').get_attribute('href')
     # link_list.append(link)
-    link = driver.find_element(By.CSS_SELECTOR, '#root > div > div.ant-row.FrEdP.css-1bkhbmc.app > div:nth-child(1) > div > div.ant-col.ant-col-20.ant-col-push-4.Jv5R8.css-1bkhbmc.app > div._17mcb > div:nth-child('+type_i+') > div > div > div.buTCk').get_attribute('href')
+
+    # Using css_selector
+
+    link = driver.find_element(By.CSS_SELECTOR, '#root > div > div.ant-row.FrEdP.css-1bkhbmc.app > div:nth-child(1) > div > div.ant-col.ant-col-20.ant-col-push-4.Jv5R8.css-1bkhbmc.app > div._17mcb > div:nth-child('+type_i+') > div > div > div.buTCk > div.RfADt > a').get_attribute('href')
     link_list.append(link)
 
 
